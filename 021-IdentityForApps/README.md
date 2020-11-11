@@ -44,29 +44,45 @@ Challenge 5: **[Enrich Claims During Sign-Up](Student/05-claims-enrichment.md)**
 
 - Enrich the claims that you collect about a user during the sign up process by calling out to a custom REST API
 
-Challenge 6: **[Prepare Environment for Custom Policies](Student/06-prepare-ief.md)**
+Challenge 6: **[Add Conditional Access To Your Tenant](Student/06-conditional-access.md)**
+
+- Create and enforce Conditional Access policies in your tenant such as enforcing MFA (including Microsoft Authenticator) and detecting Risky Login Behavior
+
+Challenge 7: **[Admin the B2C Tenant with MS Graph](Student/07-admin-graph.md)**
+
+- Use the MS Graph API to query your B2C tenant. Also use the Graph API to update various objects in your B2C tenant, such as policies, keys, and identity providers.
+
+Challenge 8: **[Prepare Environment for Custom Policies](Student/08-prepare-ief.md)**
 
 - We'll need custom policies, so let's get things ready. Apply the Trust Framework and also create an OIDC IdP for your external IdP
 
-Challenge 7: **[Stepping Up To Custom Policies](Student/07-custom-policy.md)**
+Challenge 9: **[Stepping Up To Custom Policies](Student/09-custom-policy.md)**
 
 - Implement a custom policy for Sign In that will call to your custom REST API to perform claims enrichment for users that signed up prior to Challenge 5. Also, we'll break the Sign Up and Sign In policy to be just a Sign Up policy.
 
-Challenge 8: **[Tracking a User's Journey in a Policy](Student/08-appinsights.md)**
+Challenge 10: **[Tracking a User's Journey in a Policy](Student/10-appinsights.md)**
 
 - Enable App Insights in your custom policy so you can track a user through the various steps in the Orchestration. Add custom events to your Orchestration and track them in App Insights.
 
-Challenge 9: **[Add a SubJourney for Terms of Service](Student/09-subjourney.md)**
+Challenge 11: **[Add a SubJourney for Terms of Service](Student/11-subjourney.md)**
 
 - Create a subjourney in your orchestration to check whether a user needs to accept an updated version of the company's Terms of Service and record that the user has accepted them.
 
-Challenge 10: **[Parameterize Your Custom Policies](Student/10-parameterize.md)**
+Challenge 12: **[Parameterize Your Custom Policies](Student/12-parameterize.md)**
 
 - Take your custom policies and parameterize the values that could change from environment to environment, and use the B2C extension to VS Code to generate environment-specific policy files.
 
-Challenge 11: **[Admin the B2C Tenant with MS Graph](Student/11-admin-graph.md)**
+Challenge 13: **[BONUS: Set Up a CI/CD Pipeline for Your B2C Tenant Policies](Student/13-cicd.md)**
 
-- Use the MS Graph API to query your B2C tenant. Also use the Graph API to update various objects in your B2C tenant, such as policies, keys, and identity providers.
+- Enable a CI/CD pipeline for your policies to be applied to a DEV and a PROD B2C tenant in order to simulate a multiple environment environment.
+
+Challenge 14: **[BONUS: Enable Multi-Tenancy Support in Your B2C Tenant](Student/14-multi-tenant.md)**
+
+- Enable multi-tenancy support in your B2C tenant to allow sign-ins from multiple Azure AD tenants.
+
+Challenge 15: **[BONUS: Monitoring Your Tenant](Student/15-monitor.md)**
+
+- Monitor your B2C tenant by combining logs and app insights logs
 
 ## Prerequisites
 

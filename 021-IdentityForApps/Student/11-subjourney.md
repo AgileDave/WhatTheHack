@@ -4,9 +4,9 @@ _This is a markdown template for how a WTH Challenge should be organized and for
 
 _This file should be named according to this pattern: `Challenge-X.md` where X is the number of the challenge, ie: 0, 1, 2, etc_
 
-# Challenge \#7 - Creating Custom Policies
+# Challenge \#11 - Journeying with SubJourneys
 
-[< Previous Challenge](./06-prepare-ief.md) - **[Home](../readme.md)** - [Next Challenge>](./08-appinsights.md)
+[< Previous Challenge](./10-appinsights.md) - **[Home](../readme.md)** - [Next Challenge>](./12-parameterize.md)
 
 ## Pre-requisites (Optional)
 

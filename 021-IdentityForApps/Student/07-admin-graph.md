@@ -4,9 +4,9 @@ _This is a markdown template for how a WTH Challenge should be organized and for
 
 _This file should be named according to this pattern: `Challenge-X.md` where X is the number of the challenge, ie: 0, 1, 2, etc_
 
-# Challenge \#6 - Preparation for Identity Experience Framework
+# Challenge \#7 - Admin Your B2C Tenant with MS Graph
 
-[< Previous Challenge](./05-claims-enrichment.md) - **[Home](../readme.md)** - [Next Challenge>](./07-custom-policy.md)
+[< Previous Challenge](./06-conditional-access.md) - **[Home](../readme.md)** - [Next Challenge>](./08-prepare-ief.md)
 
 ## Pre-requisites (Optional)
 

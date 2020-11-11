@@ -4,9 +4,9 @@ _This is a markdown template for how a WTH Challenge should be organized and for
 
 _This file should be named according to this pattern: `Challenge-X.md` where X is the number of the challenge, ie: 0, 1, 2, etc_
 
-# Challenge \#5 - Claims Enrichment
+# Challenge \#12 - Parameterize Your Policies
 
-[< Previous Challenge](./04-l14n.md) - **[Home](../readme.md)** - [Next Challenge>](./06-conditional-access.md)
+[< Previous Challenge](./11-subjourney.md) - **[Home](../readme.md)** - [Next Challenge>](./13-cicd.md)
 
 ## Pre-requisites (Optional)
 

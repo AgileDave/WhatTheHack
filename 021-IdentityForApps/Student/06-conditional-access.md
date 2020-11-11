@@ -4,9 +4,9 @@ _This is a markdown template for how a WTH Challenge should be organized and for
 
 _This file should be named according to this pattern: `Challenge-X.md` where X is the number of the challenge, ie: 0, 1, 2, etc_
 
-# Challenge \#11 - Admin Your B2C Tenant with MS Graph
+# Challenge \#6 - Conditional Access
 
-[< Previous Challenge](./10-parameterize.md) - **[Home](../readme.md)**
+[< Previous Challenge](./05-claims-enrichment.md) - **[Home](../readme.md)** - [Next Challenge>](./07-admin-graph.md)
 
 ## Pre-requisites (Optional)
 

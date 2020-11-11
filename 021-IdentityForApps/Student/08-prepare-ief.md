@@ -4,9 +4,9 @@ _This is a markdown template for how a WTH Challenge should be organized and for
 
 _This file should be named according to this pattern: `Challenge-X.md` where X is the number of the challenge, ie: 0, 1, 2, etc_
 
-# Challenge \#8 - Getting Insights Into B2C
+# Challenge \#8 - Preparation for Identity Experience Framework
 
-[< Previous Challenge](./07-custom-policy.md) - **[Home](../readme.md)** - [Next Challenge>](./09-subjourney.md)
+[< Previous Challenge](./07-admin-graph.md) - **[Home](../readme.md)** - [Next Challenge>](./09-custom-policy.md)
 
 ## Pre-requisites (Optional)
 

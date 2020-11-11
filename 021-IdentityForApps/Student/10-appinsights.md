@@ -4,9 +4,9 @@ _This is a markdown template for how a WTH Challenge should be organized and for
 
 _This file should be named according to this pattern: `Challenge-X.md` where X is the number of the challenge, ie: 0, 1, 2, etc_
 
-# Challenge \#10 - Parameterize Your Policies
+# Challenge \#10 - Getting Insights Into B2C
 
-[< Previous Challenge](./09-subjourney.md) - **[Home](../readme.md)** - [Next Challenge>](./11-admin-graph.md)
+[< Previous Challenge](./09-custom-policy.md) - **[Home](../readme.md)** - [Next Challenge>](./11-subjourney.md)
 
 ## Pre-requisites (Optional)
 

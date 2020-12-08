@@ -35,7 +35,8 @@ CMC IT Leadership considers success in dealing with this QA issue if you are abl
 - Deploy the Azure function (the "CMC ID Verify-inator");
 - Ensure that, during sign-up, a consultant enters a valid CMC Consultant ID; if they pass in an invalid ID, the consultant is presented with a friendly error message;
 - Ensure that, during sign-up, a territory name is generated and added to the consultant's account;
-- Ensure that, during sign-in, the consultant's territory name is returned as part of their token
+- Ensure that, during sign-in, the consultant's territory name is returned as part of their token;
+- Ensure that, during profile editing, the consultant's territory name is editable but the CMC Consultant ID is not editable.
 
 ## Learning Resources
 
@@ -46,9 +47,3 @@ CMC IT Leadership considers success in dealing with this QA issue if you are abl
 ## Tips
 
 **- [API Connector Best Practices](https://docs.microsoft.com/en-us/azure/active-directory-b2c/add-api-connector#best-practices-and-how-to-troubleshoot)**
-
-## Advanced Challenges (Optional)
-
-_Too comfortable? Eager to do more? Try these additional challenges!_
-
-**- Incorporate with the Profile Update the ability to modify the teritory name. Make sure that the CMC Consultant ID is displayed in Profile Edit, but ensure that it is only read-only.**

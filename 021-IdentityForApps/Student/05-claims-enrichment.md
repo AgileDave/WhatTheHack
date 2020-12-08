@@ -1,4 +1,4 @@
-# Challenge \#5 - Claims Enrichment
+# Challenge \#5 - Claims Enrichment - The ID Verify-inator!!
 
 [< Previous Challenge](./04-l14n.md) - **[Home](../readme.md)** - [Next Challenge>](./06-conditional-access.md)
 
@@ -10,6 +10,7 @@
 - Incorporated a 3rd party IdP (e.g. GitHub, Facebook, etc.)
 - Using a custom HTML template
 - Localized resources along with multi-language support
+- A working Profile Edit User Flow
 
 ## Description
 

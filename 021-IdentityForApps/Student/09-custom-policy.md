@@ -1,73 +1,46 @@
-# What The Hack - Challenge Template
-
-_This is a markdown template for how a WTH Challenge should be organized and formatted. If a section is marked as "(Optional)", you do not need to include it._
-
-_This file should be named according to this pattern: `Challenge-X.md` where X is the number of the challenge, ie: 0, 1, 2, etc_
-
 # Challenge \#9 - Creating Custom Policies
 
 [< Previous Challenge](./08-prepare-ief.md) - **[Home](../readme.md)** - [Next Challenge>](./10-appinsights.md)
 
 ## Pre-requisites (Optional)
 
-_Include any technical pre-requisites needed for this challenge. Typically, it is completion of one or more of the previous challenges if there is a dependency._
-
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit.**
-
-**- Fusce commodo nulla elit, vitae scelerisque lorem maximus eu.**
-
-**- Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo.**
-
-**- Vivamus venenatis accumsan neque non lacinia. Sed maximus sodales varius. Proin eu nulla nunc. Proin scelerisque ipsum in massa tincidunt venenatis. Nulla eget interdum nunc, in vehicula risus.**
-
-## Introduction (Optional)
-
-_Provide an overview of the technologies or tasks that will be needed to complete the next challenge. This includes the technical context for the challenge, as well as any new "lessons" the attendees should learn before completing the challenge._
-
-_Optionally, the coach or event host may present a mini-lesson (with a PPT or video) to set up the context & introduction to the next topic._
-
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo nulla elit, vitae scelerisque lorem maximus eu. Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo. Vivamus venenatis accumsan neque non lacinia.**
+- Provisioned a B2C tenant
+- Deployed the Identity Experience Framework (IEF)
 
 ## Description
 
-_The challenge description and details go here. This should NOT be step-by-step but rather a simple stating of the technical goals of the challenge. If this is more than 2-3 paragraphs, it's likely you are not doing it right._
+Now that you've set up the IEF environment, we can begin to clean up the users that signed up with an invalid CMC ID prior to challenge 5. We'll incorporate the REST call for claims enrichment for this sign-in process in order to validate the consultants's CMC ID and alert the user if it's invalid.
 
-_Optionally, you may provide learning resources and/or tips and code snippets in the sections below. These are meant as learning aids for the attendees to help them complete the challenge and maintain momentum as they may fall behind the rest of their squad cohorts._
+Your CMC QA team has put together a checklist of steps that they will check to validate that a user's CMC ID is properly in place in the B2C directory. The steps include:
 
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo nulla elit, vitae scelerisque lorem maximus eu. Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo. Vivamus venenatis accumsan neque non lacinia. Sed maximus sodales varius. Proin eu nulla nunc. Proin scelerisque ipsum in massa tincidunt venenatis. Nulla eget interdum nunc, in vehicula risus. Etiam rutrum purus non eleifend lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis vestibulum risus. Maecenas eu eros sit amet ligula consectetur pellentesque vel quis nisi.**
+- Upon sign-in, the user's account is checked for the presence of a CMC ID. If one is not found for that account, then:
+  - Present a self-asserted form where the user enters their CMC ID
+  - The user's CMC ID is then run through the "CMC ID Verify-inator" to validate the ID and return the new territory name
+  - Of course, if the CMC ID is invalid, then a friendly error message is presented
+  - Save the CMC ID and Territory Name to the user's account
+- If the user's account has a CMC ID and does not have a territory name associated with it, then:
+  - Run the CMC ID through the "CMC ID Verify-inator" to validate the ID and return the new territory name
+  - If the CMC ID is invalid, present a friendly error message
+  - Save the Territory Name to the user's account
+- If the user's account has a CMC ID and Territory Name, proceed with signing the user in.
 
 ## Success Criteria
 
-_Success criteria goes here. This is a list of things an coach can verfiy to prove the attendee has successfully completed the challenge._
+To successfully pass this challenge, you should be able to demonstrate:
 
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo nulla elit, vitae scelerisque lorem maximus eu. Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo.**
-
-**- Vivamus venenatis accumsan neque non lacinia. Sed maximus sodales varius. Proin eu nulla nunc. Proin scelerisque ipsum in massa tincidunt venenatis. Nulla eget interdum nunc, in vehicula risus. Etiam rutrum purus non eleifend lacinia.**
-
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis vestibulum risus. Maecenas eu eros sit amet ligula consectetur pellentesque vel quis nisi.**
+- A user with a missing CMC ID will have their CMC ID and Territory Name populated upon successful sign-in;
+- A user with an existing CMC ID that is invalid will not be able to sign-in;
+- A user with an existing CMC ID that is valid will be able to sign-in along with having their Territory Name populated; and,
+- A user with a valid existing CMC ID and Territory Name will be able to sign-in without issue.
 
 ## Learning Resources
 
-_List of relevant links and online articles that should give the attendees the knowledge needed to complete the challenge._
+**[RESTful Technical Profile for Custom Policies](https://docs.microsoft.com/en-us/azure/active-directory-b2c/restful-technical-profile)**
+**[AD B2C Sample - Integrate REST API claims exchanges](https://github.com/azure-ad-b2c/rest-api)**
+**[UserJourneys and Preconditions reference](https://docs.microsoft.com/en-us/azure/active-directory-b2c/userjourneys)**
 
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit.**
+## Tips
 
-**- Fusce commodo nulla elit, vitae scelerisque lorem maximus eu.**
+**- Consider using Preconditions on the existence of your claims (CMC ID and Territory Name), and use this for branching in your UserJourney.**
 
-**- Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo.**
-
-## Tips (Optional)
-
-_Add tips and hints here to give students food for thought._
-
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit.**
-
-**- Fusce commodo nulla elit, vitae scelerisque lorem maximus eu.**
-
-## Advanced Challenges (Optional)
-
-_Too comfortable? Eager to do more? Try these additional challenges!_
-
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo nulla elit, vitae scelerisque lorem maximus eu. Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo. Vivamus venenatis accumsan neque non lacinia.**
-
-**- Sed maximus sodales varius. Proin eu nulla nunc. Proin scelerisque ipsum in massa tincidunt venenatis. Nulla eget interdum nunc, in vehicula risus. Etiam rutrum purus non eleifend lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis vestibulum risus. Maecenas eu eros sit amet ligula consectetur pellentesque vel quis nisi.**
+**- Consider creating a few dummy users via the Azure B2C Portal for testing - they won't have a CMC ID nor Territory Name.**

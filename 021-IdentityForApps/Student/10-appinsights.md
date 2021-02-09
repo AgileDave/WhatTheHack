@@ -1,28 +1,29 @@
 # Challenge \#10 - Getting Insights Into B2C
 
-[< Previous Challenge](./09-custom-policy.md) - **[Home](../readme.md)** - [Next Challenge>](./11-subjourney.md)
+[< Previous Challenge](./09-custom-policy.md) - **[Home](../readme.md)** - [Next Challenge>](./11-parameterize.md)
 
 ## Pre-requisites (Optional)
 
 - Provisioned a B2C tenant
 - Deployed the Identity Experience Framework (IEF)
-- Deployed the Challenge 9 Sign-In Policy
+- Deployed the Challenge 9 Delete My Account Policy
 
 ## Description
 
-Your innovative developer (the one who developed the "CMC ID Verify-inator") has been paying attention to your efforts with custom policies and has decided to take a shot at building one. The developer's custom policy has been provided to you in your challenge materials, and the CMC QA Team has asked you to deploy it to your B2C tenant. The policy is a sign-up policy that prompts a prospective customer with a few questions. At the end of the questioning, the user's account is provisioned along with the answers to their questions.
+You've been asked to add some debugging to the Delete My Account policy in order to see what happens when a user tries to log in with a social identity that doesn't exist in the B2C tenant. For example, if the user tries to delete the account "name@github.com" (which is a valid GitHub login) but that account doesn't exist in the B2C tenant, what step is this being handled in the User Journey?
 
-The custom policy deploys fine, but you notice that it doesn't work. When you test the policy in the B2C portal, it errors out on you.
+The CMC Product Team would like to know:
 
-You've decided to add some tracing to the custom policy in order to determine what the error might be. CMC IT Leadership, who's a big fan of your innovative developer, wants the issue fixed quickly...hopefully you find a solution so you can go home soon!
+- How can we tell, by using metrics, how many "user not found" events were encountered by users?
+- How many "successful delete" events were encountered by users?
 
 ## Success Criteria
 
 You will be successful with this challenge if you are able to:
 
-- Determine where the error in the custom policy is;
-- Demonstrate to your coach how you were able to detect the error;
-- Redeploy the custom policy and have new users successfully go through the sign-up process without error
+- Inject Application Insights into your User Journey
+- Record specific events for "user not found" and "successful delete"
+- Display the recorded events to your Coach
 
 ## Learning Resources
 
@@ -33,8 +34,3 @@ You will be successful with this challenge if you are able to:
 
 **- Make sure your Custom Policy is in `Developer` deployment mode.**
 
-## Advanced Challenges (Optional)
-
-If this was too easy, then try to add Usage Analytics to the steps in the custom policy. Test it out with a few users, having each of the users only get so far in their journey before quitting the process (and some successfully finishing the sign-up process).
-
-Also, use different browsers to test your usage tracking, along, if possible, testing it out on different devices (mobile vs. desktop). This way, you'll have different sessions running.

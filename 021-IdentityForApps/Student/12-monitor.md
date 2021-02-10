@@ -1,5 +1,3 @@
-# What The Hack - Challenge Template
-
 # Challenge \#12 - BONUS: Hey, What's Going On In My B2C Tenant??
 
 [< Previous Challenge](./11-parameterize.md) - **[Home](../readme.md)**

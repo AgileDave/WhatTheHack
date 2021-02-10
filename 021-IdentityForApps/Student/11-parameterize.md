@@ -1,5 +1,3 @@
-# What The Hack - Challenge Template
-
 # Challenge \#11 - Parameterize Your Policies
 
 [< Previous Challenge](./10-appinsights.md) - **[Home](../readme.md)** - [Next Challenge>](./12-monitor.md)

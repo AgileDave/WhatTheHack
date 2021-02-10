@@ -7,9 +7,8 @@
 ## Pre-requisites (Optional)
 
 - Provisioned a B2C tenant
-- Deployed the Identity Experience Framework (IEF)
-- Deployed the Challenge 9 Delete My Account Policy
-
+- Deployed User Flows and/or Custom Policies
+- Added External IdPs, Included Conditional Access, Called to REST APIs
 
 ## Description
 

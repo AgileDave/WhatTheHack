@@ -87,13 +87,13 @@ Challenge 12: **[Monitoring Your Tenant](Student/12-monitor.md)**
 
 - `../Coach`
   - Coach's Guide and related files
-- `../Resources/HarnessApp`
+- `./Student/Resources/HarnessApp`
   - Sample AspNetCore app to be used to interact with your B2C tenant
-- `../Resources/MSGraphApp`
+- `./Student/Resources/MSGraphApp`
   - Sample DotNetCore Console app to be used to query your B2C tenant
-- `../Resources/Verify-inator`
+- `./Student/Resources/Verify-inator`
   - Sample AspNetCore WebApi app to be called by your B2C tenant's SignUp User Flows
-- `../Resources/PageTemplates`
+- `./Student/Resources/PageTemplates`
   - Sample HTML page template that can be used to customize User Flows and Custom Policies
 - `../Student`
   - Student's Challenge Guide

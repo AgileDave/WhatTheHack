@@ -2,11 +2,7 @@
 
 [< Previous Challenge](./02-susi.md) - **[Home](../README.md)** - [Next Challenge>](./04-l14n.md)
 
-<<<<<<< HEAD
-## Pre-requisites
-=======
 ## Introduction
->>>>>>> upstream/master
 
 In addition to creating local accounts, Azure Active Directory B2C allows your users to sign in with credentials from enterprise or social identity providers (IdP), supporting OAuth 1.0 and 2.0, OpenID Connect, and SAML protocols.
 

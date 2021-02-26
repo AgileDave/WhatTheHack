@@ -1,8 +1,6 @@
-# What The Hack - Challenge Template
-
 # Challenge \#2 - Sign Me Up! Sign Me In!
 
-[< Previous Challenge](./01-provision-b2c.md) - **[Home](../readme.md)** - [Next Challenge>](./03-external-idp.md)
+[< Previous Challenge](./01-provision-b2c.md) - **[Home](../README.md)** - [Next Challenge>](./03-external-idp.md)
 
 ## Introduction
 
@@ -22,12 +20,13 @@ They are asking that you collect the following attributes of each consultant:
 - Email Address
 - City
 - State
-- CMC Consultant ID
+- CMC Consultant ID (named "ConsultantID")
 
-It should be noted that CMC only is licensed to do business in the following states: **NY, PA, OH, IN, IL, MN, WI, KY, WV, IA**.
+It should be noted that CMC only is licensed to do business in the following states: **NY, PA, OH, IN, IL, MN, WI, KY, WV, IA, MI**.
 
 CMC IT Management has also asked that First and Last Name are displayed BEFORE Display Name on the sign up form. There's also a rumor that IT Management has also expressed that they are partial to the Slate Gray User Flow template.
 
+CMC IT Management also wants the same attributes returned when the user successfully logs in, along with the Identity Provider name.
 ## Success Criteria
 
 In order to be successful, CMC IT Management is requiring that consultants can:
@@ -38,6 +37,7 @@ In order to be successful, CMC IT Management is requiring that consultants can:
 - Ensure that consultants in the states that CMC is certified in are allowed to sign up.
 - Ensure that the email provided is a valid email address.
 - Ensure that the user attributes are displayed in preferred order along with the proper template being used.
+- Ensure a successful signin returns the attributes collected during signup, along with the Identity Provider name.
 
 There isn't a consultant management web application yet (the developers are a bit behind schedule), so IT Management is fine with testing our sign-up and sign-in capabilities in the B2C tenant portal (for now!).
 
@@ -50,5 +50,10 @@ There isn't a consultant management web application yet (the developers are a bi
 
 _Too comfortable? Eager to do more? Try these additional challenges!_
 
+<<<<<<< HEAD
 1. IT Management has decided that the sign-up policy doesn't require Email Verification (I mean, who would enter a non-existent email address??). Disable this in your sign-up policy.
 2. IT Management is also considering allowing users to edit their account after creation. Get a head start on this by putting together an Edit Profile User Flow and test it in the B2C Tenant Portal.
+=======
+- IT Management has decided that the sign-up policy doesn't require Email Verification (I mean, who would enter a non-existent email address??). Disable this in your sign-up policy.
+- IT Management is also considering allowing users to edit their account after creation. Get a head start on this by putting together an Edit Profile User Flow and test it in the B2C Tenant Portal.
+>>>>>>> upstream/master

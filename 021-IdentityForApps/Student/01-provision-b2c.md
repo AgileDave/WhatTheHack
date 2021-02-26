@@ -1,10 +1,6 @@
 # Challenge \#1 - Getting Started with B2C
 
-[< Previous Challenge](./00-pre-reqs.md) - **[Home](../readme.md)** - [Next Challenge>](./02-susi.md)
-
-## Pre-requisites
-
-- A valid Azure subscription with contributor permissions.
+[< Previous Challenge](./00-pre-reqs.md) - **[Home](../README.md)** - [Next Challenge>](./02-susi.md)
 
 ## Introduction
 

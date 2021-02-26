@@ -1,73 +1,30 @@
-# What The Hack - Challenge Template
-
-_This is a markdown template for how a WTH Challenge should be organized and formatted. If a section is marked as "(Optional)", you do not need to include it._
-
-_This file should be named according to this pattern: `Challenge-X.md` where X is the number of the challenge, ie: 0, 1, 2, etc_
-
 # Challenge \#8 - Preparation for Identity Experience Framework
 
-[< Previous Challenge](./07-admin-graph.md) - **[Home](../readme.md)** - [Next Challenge>](./09-custom-policy.md)
-
-## Pre-requisites (Optional)
-
-_Include any technical pre-requisites needed for this challenge. Typically, it is completion of one or more of the previous challenges if there is a dependency._
-
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit.**
-
-**- Fusce commodo nulla elit, vitae scelerisque lorem maximus eu.**
-
-**- Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo.**
-
-**- Vivamus venenatis accumsan neque non lacinia. Sed maximus sodales varius. Proin eu nulla nunc. Proin scelerisque ipsum in massa tincidunt venenatis. Nulla eget interdum nunc, in vehicula risus.**
-
-## Introduction (Optional)
-
-_Provide an overview of the technologies or tasks that will be needed to complete the next challenge. This includes the technical context for the challenge, as well as any new "lessons" the attendees should learn before completing the challenge._
-
-_Optionally, the coach or event host may present a mini-lesson (with a PPT or video) to set up the context & introduction to the next topic._
-
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo nulla elit, vitae scelerisque lorem maximus eu. Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo. Vivamus venenatis accumsan neque non lacinia.**
+[< Previous Challenge](./07-admin-graph.md) - **[Home](../README.md)** - [Next Challenge>](./09-custom-policy.md)
 
 ## Description
 
-_The challenge description and details go here. This should NOT be step-by-step but rather a simple stating of the technical goals of the challenge. If this is more than 2-3 paragraphs, it's likely you are not doing it right._
+Custom policies are configuration files that define the behavior of your AAD B2C tenant. Leadership at CMC wants you to enable your tenant to allow custom policies to be used in the future. These may be used to allow different types of user interactions other than the pre-set User Flows defined in the Azure portal. Custom policies are a set of XML files that define technical profiles and user journeys in your AAD B2C tenant. Microsoft provides a starter pack of custom policies you can find down below in the learning resources.
 
-_Optionally, you may provide learning resources and/or tips and code snippets in the sections below. These are meant as learning aids for the attendees to help them complete the challenge and maintain momentum as they may fall behind the rest of their squad cohorts._
+In this challenge, CMC IT Leadership will be asking for a feature that will require B2C's Custom Policies. Being proactive, you want to prepare your environment for Custom Policies by deploying the TrustFramework into your B2C tenant.
 
-**Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo nulla elit, vitae scelerisque lorem maximus eu. Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo. Vivamus venenatis accumsan neque non lacinia. Sed maximus sodales varius. Proin eu nulla nunc. Proin scelerisque ipsum in massa tincidunt venenatis. Nulla eget interdum nunc, in vehicula risus. Etiam rutrum purus non eleifend lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis vestibulum risus. Maecenas eu eros sit amet ligula consectetur pellentesque vel quis nisi.**
+You'll want to deploy the SocialAndLocalAccounts flavor of the TrustFramework, and also configure a social IdP (preferably the one that you configured in [Challenge 3](./03-external-idp.md) ) so that you can work with the accounts that you created earlier.
+
 
 ## Success Criteria
 
-_Success criteria goes here. This is a list of things an coach can verfiy to prove the attendee has successfully completed the challenge._
+Your success criteria can be measured in the following ways:
 
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo nulla elit, vitae scelerisque lorem maximus eu. Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo.**
-
-**- Vivamus venenatis accumsan neque non lacinia. Sed maximus sodales varius. Proin eu nulla nunc. Proin scelerisque ipsum in massa tincidunt venenatis. Nulla eget interdum nunc, in vehicula risus. Etiam rutrum purus non eleifend lacinia.**
-
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis vestibulum risus. Maecenas eu eros sit amet ligula consectetur pellentesque vel quis nisi.**
+- Successfully added `IdentityExperienceFramework`, `ProxyIdentityExperienceFramework`, and granted the proper permissions
+- Cloned the GitHub repository of the Microsoft-provided custom policy starter pack
+- Added the Application IDs from your `IdentityExperienceFramework` and `ProxyIdentityExperienceFramework` to the appropriate files from the starter pack
+- You are able to SignUp and SignIn using the sample SUSI policy in the TrustFramework, both local accounts and social identity accounts
+- You will not have to integrate the sample SUSI policy into your harness application - you can just test and run this policy via the Azure AD B2C portal
 
 ## Learning Resources
 
-_List of relevant links and online articles that should give the attendees the knowledge needed to complete the challenge._
+- [Get started with Custom Policies in Azure AD B2C](https://docs.microsoft.com/en-us/azure/active-directory-b2c/custom-policy-get-started)
 
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit.**
+- [Register an app with the MS identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app#register-a-new-application-using-the-azure-portal)
 
-**- Fusce commodo nulla elit, vitae scelerisque lorem maximus eu.**
-
-**- Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo.**
-
-## Tips (Optional)
-
-_Add tips and hints here to give students food for thought._
-
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit.**
-
-**- Fusce commodo nulla elit, vitae scelerisque lorem maximus eu.**
-
-## Advanced Challenges (Optional)
-
-_Too comfortable? Eager to do more? Try these additional challenges!_
-
-**- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce commodo nulla elit, vitae scelerisque lorem maximus eu. Nulla vitae ante turpis. Etiam tincidunt venenatis mauris, ac volutpat augue rutrum sed. Vivamus dignissim est sed dolor luctus aliquet. Vestibulum cursus turpis nec finibus commodo. Vivamus venenatis accumsan neque non lacinia.**
-
-**- Sed maximus sodales varius. Proin eu nulla nunc. Proin scelerisque ipsum in massa tincidunt venenatis. Nulla eget interdum nunc, in vehicula risus. Etiam rutrum purus non eleifend lacinia. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis vestibulum risus. Maecenas eu eros sit amet ligula consectetur pellentesque vel quis nisi.**
+- [Custom Policy Starter Pack](https://github.com/Azure-Samples/active-directory-b2c-custom-policy-starterpack)

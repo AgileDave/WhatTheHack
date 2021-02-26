@@ -2,22 +2,27 @@
 
 ## Introduction
 
-The Identity for Developers Hack will provide you a deep dive experience into enabling internal and external identity solutions for your applications. Identity is a booming area of the Microsoft Cloud platform and enabling identity solutions in your engagements allows for faster production deployments.
+The Identity for Developers Hack will provide you a deep dive experience into enabling customer-facing identity solutions for your applications. Identity is a booming area of the Microsoft Cloud platform and enabling identity solutions in your engagements allows for faster production deployments. Azure Active Directory B2C enables you to provide custom identity access management solutions for your applications.
 
+
+![B2C Overview](https://docs.microsoft.com/en-us/azure/active-directory-b2c/media/overview/scenario-singlesignon.png)
 ## Learning Objectives
 
-In this hack, we'll enable identity solutions for several applications, demonstrating how to
+In this hack, we'll enable identity solutions using Azure Active Directory B2C, demonstrating how to:
 
-1. Provision several types of Managed Identities
-2. Set up an Azure Active Directory and enable External Identities
-3. Set up an Azure Active Directory B2C directory for customer-facing applications, utilizing:
+  1. Create and integrate out of the box user flows
 
-   a. Out of the box user flows
+  2. Create and integrate customized policies
 
-   b. Customized policies
+  3. Call REST APIs for token enrichment and claims validation
 
-   c. REST APIs for token enrichment and custom approval workflows
+  4. Monitor and report on your B2C tenant
 
+## Overall Architecture
+
+In this hack, you will build Azure AD B2C policies that enable users to be able to sign up, sign in, edit their profile, and delete their account. Along the way, you will enable API integration, conditional access checks, monitoring, and other services. The below diagram shows the various services this hack involves, along with the corresponding challenges where you will encounter these services. The section that follows this provides additional information and links to the specific challenges.
+
+![Contoso Manufacturing Consultant App Architecture](./Images/Azure_AD_B2C_WTH_Final_Design.png)
 ## Challenges
 
 Challenge 0: **[Prepare your workstation for Identity development](Student/00-pre-reqs.md)**
@@ -30,7 +35,7 @@ Challenge 1: **[Provision an Azure AD B2C Tenant](Student/01-provision-b2c.md)**
 
 Challenge 2: **[Create a Sign Up and Sign In Experience](Student/02-susi.md)**
 
-- Create a simple Sign Up and Sign In user flow and connect it to an ASPNETCORE MVC App
+- Create a simple Sign Up and Sign In user flow and test it in the Azure AD B2C portal
 
 Challenge 3: **[Set Up an External IdP](Student/03-external-idp.md)**
 
@@ -38,7 +43,7 @@ Challenge 3: **[Set Up an External IdP](Student/03-external-idp.md)**
 
 Challenge 4: **[Customize Look and Feel and Localization](Student/04-l14n.md)**
 
-- Add a bit of flare to your sign up and sign in pages by adding your company's logo, colors, and custom layouts to the user experience along with supporting multiple languages
+- Add a bit of flare to your sign up and sign in pages by adding a custom template and colors, wiring up your User Flows to an ASPNETCORE MVC app, and use language customization to modify string values displayed to the user
 
 Challenge 5: **[Enrich Claims During Sign-Up](Student/05-claims-enrichment.md)**
 
@@ -56,7 +61,7 @@ Challenge 8: **[Prepare Environment for Custom Policies](Student/08-prepare-ief.
 
 - We'll need custom policies, so let's get things ready. Apply the Trust Framework and also create an OIDC IdP for your external IdP
 
-Challenge 9: **[Stepping Up To Custom Policies](Student/09-custom-policy.md)**
+Challenge 9: **[Creating Custom Policies](Student/09-custom-policy.md)**
 
 - Implement a custom policy for Sign In that will call to your custom REST API to perform claims enrichment for users that signed up prior to Challenge 5. Also, we'll break the Sign Up and Sign In policy to be just a Sign Up policy.
 
@@ -64,23 +69,11 @@ Challenge 10: **[Tracking a User's Journey in a Policy](Student/10-appinsights.m
 
 - Enable App Insights in your custom policy so you can track a user through the various steps in the Orchestration. Add custom events to your Orchestration and track them in App Insights.
 
-Challenge 11: **[Add a SubJourney for Terms of Service](Student/11-subjourney.md)**
-
-- Create a subjourney in your orchestration to check whether a user needs to accept an updated version of the company's Terms of Service and record that the user has accepted them.
-
-Challenge 12: **[Parameterize Your Custom Policies](Student/12-parameterize.md)**
+Challenge 11: **[Parameterize Your Custom Policies](Student/11-parameterize.md)**
 
 - Take your custom policies and parameterize the values that could change from environment to environment, and use the B2C extension to VS Code to generate environment-specific policy files.
 
-Challenge 13: **[BONUS: Set Up a CI/CD Pipeline for Your B2C Tenant Policies](Student/13-cicd.md)**
-
-- Enable a CI/CD pipeline for your policies to be applied to a DEV and a PROD B2C tenant in order to simulate a multiple environment environment.
-
-Challenge 14: **[BONUS: Enable Multi-Tenancy Support in Your B2C Tenant](Student/14-multi-tenant.md)**
-
-- Enable multi-tenancy support in your B2C tenant to allow sign-ins from multiple Azure AD tenants.
-
-Challenge 15: **[BONUS: Monitoring Your Tenant](Student/15-monitor.md)**
+Challenge 12: **[Monitoring Your Tenant](Student/12-monitor.md)**
 
 - Monitor your B2C tenant by combining logs and app insights logs
 
@@ -90,18 +83,23 @@ Challenge 15: **[BONUS: Monitoring Your Tenant](Student/15-monitor.md)**
 - Visual Studio Code
 - Azure CLI
 
-## Repository Contents (Optional)
+## Repository Contents
 
-- `../Coach/Guides`
+- `../Coach`
   - Coach's Guide and related files
-- `../SteamShovel`
-  - Image files and code for steam shovel microservice
-- `../images`
-  - Generic image files needed
-- `../Student/Guides`
+- `./Student/Resources/HarnessApp`
+  - Sample AspNetCore app to be used to interact with your B2C tenant
+- `./Student/Resources/MSGraphApp`
+  - Sample DotNetCore Console app to be used to query your B2C tenant
+- `./Student/Resources/Verify-inator`
+  - Sample AspNetCore WebApi app to be called by your B2C tenant's SignUp User Flows
+- `./Student/Resources/PageTemplates`
+  - Sample HTML page template that can be used to customize User Flows and Custom Policies
+- `../Student`
   - Student's Challenge Guide
 
 ## Contributors
 
 - David Hoerster
-- ???
+- Nick Thomas
+- Tim Sullivan

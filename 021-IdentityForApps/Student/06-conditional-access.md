@@ -1,5 +1,6 @@
 # Challenge \#6 - Conditional Access - Are You Who You Say You Are?
 
+<<<<<<< HEAD
 [< Previous Challenge](./05-claims-enrichment.md) - **[Home](../readme.md)** - [Next Challenge>](./07-admin-graph.md)
 
 ## Pre-requisites
@@ -15,10 +16,13 @@
 - Azure function that validates the CMC Consultant ID and also generates a Consultant Territory Name
 - User SignUp process validates CMC Consultant ID and saves territory name to the user's account
 - Profile Edit process allows the consultant to modify their territory name but not their CMC Consultant ID
+=======
+[< Previous Challenge](./05-claims-enrichment.md) - **[Home](../README.md)** - [Next Challenge>](./07-admin-graph.md)
+>>>>>>> upstream/master
 
 ## Description
 
-As a result of incorporating the [CMC Consultant ID Verify-inator](https://phineasandferb.fandom.com/wiki/List_of_Doofenshmirtz%27s_schemes_and_inventions/Season_1) (and the [Territory Name-inator](https://phineasandferb.fandom.com/wiki/List_of_Doofenshmirtz%27s_schemes_and_inventions/Season_2)), QA has been satisfied with the fixes and CMC IT Leadership is happy again......BUT (here we go), they have realized that the site might need a little more tightening up.
+As a result of incorporating the CMC Consultant ID Verify-inator, QA has been satisfied with the fixes and CMC IT Leadership is happy again......BUT (here we go), they have realized that the site might need a little more tightening up.
 
 IT Leadership has requested that we (you) incorporate policies in your SignUp / SignIn User Flow that will require users to verify who they are, using either a code sent to their phone or to their email address.
 
@@ -45,4 +49,4 @@ CMC IT Leadership considers your efforts a success (and your odds of a promotion
 
 _Too comfortable? Eager to do more? Try these additional challenges!_
 
-**- You can create several different app registrations in your B2C tenant and then configure Conditional Access policies that are specific to each app registration. For one app reg, always force MFA; for another, only force MFA for iOS devices; for a third, force MFA for risky behaviors.**
+- You can create several different app registrations in your B2C tenant and then configure Conditional Access policies that are specific to each app registration. For one app reg, always force MFA; for another, only force MFA for iOS devices; for a third, force MFA for risky behaviors.

@@ -1,11 +1,6 @@
 # Challenge 1 - Provision B2C Instance
 
-## Prerequisites
-
-You will want to ensure that your students have gone through the preparation in their environment. At this point, they should have:
-- [Azure Subscription](https://azure.microsoft.com/en-us/free/), at least with contributor permissions
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Visual Studio Code plugins for B2C](https://marketplace.visualstudio.com/items?itemName=AzureADB2CTools.aadb2c)
+[< Previous Challenge](./00-pre-reqs.md) - **[Home](./README.md)** - [Next Challenge>](./02-susi.md)
 
 ## Introduction 
 
@@ -28,10 +23,6 @@ Provided your attendees do not have an existing B2C tenant, they can follow the 
     - Resource group - this resource group must exist before getting to this screen. <br><img src="images/01/review-and-create-tenant.png" alt="image of search" width="500"/>
 8. Click "Review & Create"
 9. After validation, click "Create". This process will take a few minutes. 
-
-## Alternate Hackflow
-
-#TODO: I have no idea when/how you might want to link an existing Azure AD B2C Tenant to a subscription, but that would go here. 
 
 ## Hints
 

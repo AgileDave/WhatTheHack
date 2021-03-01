@@ -33,8 +33,3 @@ This challenge will walk your attendees through a standard, simple sign up & sig
 10. To customize the appearance, select "Page layouts" under Customize, and then select the templates dropdown. For this hack, the slate gray template is preferred: <br><img src="../Images/02/customize-template.png" alt="image of search" width="700"/>
 11. You'd restrict the states a user can signup with by changing the data type of State/Province from TextBox to DropDownSingleSelect and entering the valid values there.
 
-## Alternate Hackflow
-
-## Hints
-
-[< Previous challenge (Provisioning a B2C Tenant)](./01-provision-b2c.md)[Next challenge (External Identity Providers) >](./03-.md)
